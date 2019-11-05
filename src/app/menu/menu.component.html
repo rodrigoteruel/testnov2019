@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+        <span>Menu</span>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="choose(1)">
+            <mat-icon>list</mat-icon>
+            <span>Listar as Categorias</span>
+        </button>
+        <button mat-menu-item (click)="choose(2)">
+            <mat-icon>format_indent_increase</mat-icon>
+            <span>Listar e inserir listas</span>
+        </button>
+        <button mat-menu-item (click)="choose(3)">
+            <mat-icon>playlist_add_check</mat-icon>
+            <span>Listar, inserir itens e marcar como "feito"</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+<mat-card>
+    <router-outlet></router-outlet>
+</mat-card>
